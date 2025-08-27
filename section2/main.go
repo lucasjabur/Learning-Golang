@@ -1,4 +1,4 @@
-package section2
+package main
 
 import "fmt"
 
@@ -24,4 +24,9 @@ func main() {
 		back quotes \n.
 		As you can see, the '\n' does not work here!
 	`)
+
+	// To print variables along side with text, you can use fmt.Println() as well, like:
+
+	const name2, age2 = "Manuela", 21
+	fmt.Println(name2, "is", age2, "years old!")
 }
