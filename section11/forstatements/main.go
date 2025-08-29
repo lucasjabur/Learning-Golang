@@ -38,4 +38,17 @@ func main() {
 			fmt.Printf("Outer loop %v \t inner loop %v\n", i, j)
 		}
 	}
+
+	slice1 := []int{10, 20, 30, 40, 50, 60}
+	for i, v := range slice1 {
+		fmt.Println("Ranging over a slice:", i, v) // 'i' gives the position of the value 'v' in the slice
+	}
+
+	map1 := map[string]int{
+		"Lucas":   23,
+		"Manuela": 22,
+	}
+	for k, v := range map1 {
+		fmt.Println("Ranging over a map:", k, v) // 'k' gives the key and 'v' the value stored in the map
+	}
 }
