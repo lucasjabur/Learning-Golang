@@ -23,6 +23,17 @@ func main() {
 		fmt.Println("This is the default case for num1!")
 	}
 
+	switch {
+	case num1 == 41:
+		fmt.Println("num1 is less than the meaning of life!")
+	case num1 == 42:
+		fmt.Println("num1 is equal to the meaning of life!")
+	case num1 == 43:
+		fmt.Println("num1 is one algarism bigger than the meaning of life!")
+	default:
+		fmt.Println("This is the default case for num1!")
+	}
+
 	// SELECT STATEMENT:
 
 	channel1 := make(chan int)
