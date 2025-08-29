@@ -10,8 +10,8 @@ func main() {
 	// So, now we're going to learn how to do it:
 	/*
 		1. 'git add ...'
-		2. 'git tag v1.0.0', for example
-		3. 'git commit -m "..."'
+		2. 'git commit -m "..."'
+		3. 'git tag v1.0.0', for example
 		4. 'git push'
 	*/
 	// Now, 'git tag' must get 'v1.0.0' as output

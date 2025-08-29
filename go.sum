@@ -2,3 +2,7 @@ github.com/lucasjabur/Dog v0.0.0-20250829115157-49a61b0ba46c h1:FcB4w9FaOEeq2c2I
 github.com/lucasjabur/Dog v0.0.0-20250829115157-49a61b0ba46c/go.mod h1:VrTYGTWad3QA8EibqacYyDnCl9YsxQc30nt6yDa5slI=
 github.com/lucasjabur/Puppy v0.0.0-20250829115933-8fefe76f5cce h1:0YARkb2R0CTEEgSkrv7hCSxBUHMegdBcBQgQ5WSpcHE=
 github.com/lucasjabur/Puppy v0.0.0-20250829115933-8fefe76f5cce/go.mod h1:3FTjMIuweb3WouqjXKLydimB/mKl8fS1OTE4xMbn3/k=
+github.com/lucasjabur/Puppy v1.3.0 h1:D4eVOtoM+rNAgRa9euUYd1qI4M1NyG95PVeNbs65m5o=
+github.com/lucasjabur/Puppy v1.3.0/go.mod h1:3FTjMIuweb3WouqjXKLydimB/mKl8fS1OTE4xMbn3/k=
+github.com/lucasjabur/Puppy v1.4.0 h1:0DuZE6yV/khwbMAGvcgBEzpyK7KnHt/TMLZmRgHE3T0=
+github.com/lucasjabur/Puppy v1.4.0/go.mod h1:3FTjMIuweb3WouqjXKLydimB/mKl8fS1OTE4xMbn3/k=
