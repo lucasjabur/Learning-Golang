@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mymodule/section8/visibilityingo"
+	visibilityingo "mymodule/section8/visibility_in_go"
 )
 
 func main() {
