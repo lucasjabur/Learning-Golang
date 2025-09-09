@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 type Person struct {
-	first_name string
+	firstName string
 }
 
 func (person Person) speak() {
-	fmt.Println("I am,", person.first_name)
+	fmt.Println("I am,", person.firstName)
 }
 
 func main() {
@@ -15,10 +15,10 @@ func main() {
 	// Basic syntax of functions in Golang: 'func (receiver) identifier(parameters) (returns) { code }'
 	// Important note: everything in Go is PASSED BY VALUE!
 
-	function_example1()
-	function_example2("I'm a parameter")
-	function_example3("Parameter 1", "Parameter 2")
-	string1, string2 := function_example4("STRING1", "STRING2")
+	functionExample1()
+	functionExample2("I'm a parameter")
+	functionExample3("Parameter 1", "Parameter 2")
+	string1, string2 := functionExample4("STRING1", "STRING2")
 	fmt.Printf("string1 now: %s\n", string1)
 	fmt.Printf("string2 now: %s\n", string2)
 
@@ -42,12 +42,12 @@ func main() {
 
 	// Now, let's learn about the 'defer' statement
 
-	function_example1()
-	defer function_example2("Hello!")
+	functionExample1()
+	defer functionExample2("Hello!")
 
-	function_example3("Good bye!", "Golang!")
+	functionExample3("Good bye!", "Golang!")
 
-	// The output must've been: output of 'function_example1', output of 'function_example2' and output of 'function_example3'
+	// The output must've been: output of 'functionExample1', output of 'functionExample2' and output of 'functionExample3'
 	/*
 
 		I'm a function and I don't have any parameters or returns!
@@ -55,7 +55,7 @@ func main() {
 		I'm a function and I have two parameter 'Good bye!' and 'Golang!' (I could have more by the way...), but no returns!
 
 	*/
-	// But, the output that we got was: output of 'function_example1', output of 'function_example3' and output of 'function_example2'
+	// But, the output that we got was: output of 'functionExample1', output of 'functionExample3' and output of 'functionExample2'
 	/*
 
 		I'm a function and I don't have any parameters or returns!
@@ -65,7 +65,7 @@ func main() {
 	*/
 	// And that because of the 'defer' command!
 	// This command delays the execution of the function associated with it, causing it to be executed only at the end of the function where it is being called!
-	// In this case, 'function_example2' is inside main(), so 'function_example2' will only be executed at the end of 'main()'.
+	// In this case, 'functionExample2' is inside main(), so 'functionExample2' will only be executed at the end of 'main()'.
 	// The 'defer' statement is useful for closing a file, instead of adding the command to close the file at the end of the code, you can do it right after openning it
 	// with the 'defer' statement before.
 	// It helps with the clarity of the code and prevents you from forgetting to close it afterwards.
@@ -73,11 +73,11 @@ func main() {
 	// Now, let's understand how to build methods in Golang:
 
 	person1 := Person{
-		first_name: "Lucas",
+		firstName: "Lucas",
 	}
 
 	person2 := Person{
-		first_name: "Manuela",
+		firstName: "Manuela",
 	}
 
 	person1.speak()
@@ -90,19 +90,19 @@ func main() {
 
 // Some examples of functions:
 
-func function_example1() {
+func functionExample1() {
 	fmt.Println("I'm a function and I don't have any parameters or returns!")
 }
 
-func function_example2(string1 string) {
+func functionExample2(string1 string) {
 	fmt.Printf("I'm a function and I have one parameter '%s', but no returns!\n", string1)
 }
 
-func function_example3(string1, string2 string) {
+func functionExample3(string1, string2 string) {
 	fmt.Printf("I'm a function and I have two parameter '%s' and '%s' (I could have more by the way...), but no returns!\n", string1, string2)
 }
 
-func function_example4(string1, string2 string) (string, string) {
+func functionExample4(string1, string2 string) (string, string) {
 	fmt.Println("I'm a function and I have two parameter and also two returns! Look!")
 	temp := string1
 	string1 = string2

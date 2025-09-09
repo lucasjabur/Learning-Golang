@@ -3,31 +3,31 @@ package main
 import "fmt"
 
 type Person struct {
-	first_name            string
-	last_name             string
-	fav_ice_cream_flavors []string
+	firstName          string
+	lastName           string
+	favIceCreamFlavors []string
 }
 
 func main() {
 	person1 := Person{
-		first_name:            "Lucas",
-		last_name:             "Jabur",
-		fav_ice_cream_flavors: []string{"chocolate", "lime", "vanilla"},
+		firstName:          "Lucas",
+		lastName:           "Jabur",
+		favIceCreamFlavors: []string{"chocolate", "lime", "vanilla"},
 	}
 
 	person2 := Person{
-		first_name:            "Manuela",
-		last_name:             "Alvarenga",
-		fav_ice_cream_flavors: []string{"strawberry", "chocolate", "pineapple"},
+		firstName:          "Manuela",
+		lastName:           "Alvarenga",
+		favIceCreamFlavors: []string{"strawberry", "chocolate", "pineapple"},
 	}
 
-	// fmt.Printf("Name: %s %s\nFavorite ice cream flavors:\n", person1.first_name, person1.last_name)
-	// for index, value := range person1.fav_ice_cream_flavors {
+	// fmt.Printf("Name: %s %s\nFavorite ice cream flavors:\n", person1.firstName, person1.lastName)
+	// for index, value := range person1.favIceCreamFlavors {
 	// 	fmt.Printf("   %d. %s\n", index+1, value)
 	// }
 
-	// fmt.Printf("\nName: %s %s\nFavorite ice cream flavors:\n", person2.first_name, person2.last_name)
-	// for index, value := range person2.fav_ice_cream_flavors {
+	// fmt.Printf("\nName: %s %s\nFavorite ice cream flavors:\n", person2.firstName, person2.lastName)
+	// for index, value := range person2.favIceCreamFlavors {
 	// 	fmt.Printf("   %d. %s\n", index+1, value)
 	// }
 
@@ -35,25 +35,25 @@ func main() {
 	// 1°: the way I did
 	/*
 
-		people_map := make(map[string]Person)
-		people_map[person1.last_name] = person1
-		people_map[person2.last_name] = person2
+		peopleMap := make(map[string]Person)
+		peopleMap[person1.lastName] = person1
+		peopleMap[person2.lastName] = person2
 
 	*/
 
 	// 2°: the way the professor did
-	people_map := map[string]Person{
-		person1.last_name: person1,
-		person2.last_name: person2,
+	peopleMap := map[string]Person{
+		person1.lastName: person1,
+		person2.lastName: person2,
 	}
 
 	// The professor's solution for the main part of the exercise:
 	/*
 
-		for _, value := range people_map {
+		for _, value := range peopleMap {
 			fmt.Println(value)
-			for _, flavors := range value.fav_ice_cream_flavors {
-				fmt.Println(value.first_name, value.last_name, flavors)
+			for _, flavors := range value.favIceCreamFlavors {
+				fmt.Println(value.firstName, value.lastName, flavors)
 			}
 		}
 
@@ -63,16 +63,16 @@ func main() {
 	// I tried to create something different, and ended up doing this:
 	/*
 
-		flavors := person1.fav_ice_cream_flavors
+		flavors := person1.favIceCreamFlavors
 		counter := 0
 
-		for key, value := range people_map {
+		for key, value := range peopleMap {
 			fmt.Printf("%s: %s\n", key, value)
 			for index, value := range flavors {
 				fmt.Printf("   %d. %s\n", index, value)
 				counter++
 				if counter == len(flavors) {
-					flavors = person2.fav_ice_cream_flavors
+					flavors = person2.favIceCreamFlavors
 					break
 				}
 			}
@@ -83,9 +83,9 @@ func main() {
 	// But that is not the best way to code this solution.
 	// Here is an improvement of my solution using something I saw on the professor's solution:
 
-	for key, value := range people_map {
+	for key, value := range peopleMap {
 		fmt.Printf("%s: %s\n", key, value)
-		for index, flavors := range value.fav_ice_cream_flavors {
+		for index, flavors := range value.favIceCreamFlavors {
 			fmt.Printf("   %d. %s\n", index, flavors)
 		}
 	}

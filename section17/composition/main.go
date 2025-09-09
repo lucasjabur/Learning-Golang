@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 type Engine struct {
-	power     float64
-	torque    float64
-	fuel_type string
+	power    float64
+	torque   float64
+	fuelType string
 }
 
 type Car struct {
@@ -17,7 +17,7 @@ type Car struct {
 }
 
 func (e *Engine) Start(engine Engine) {
-	fmt.Printf("The engine has %.2f horses of power, %.2f kgf*m of torque and uses %s as fuel.\n", engine.power, engine.torque, engine.fuel_type)
+	fmt.Printf("The engine has %.2f horses of power, %.2f kgf*m of torque and uses %s as fuel.\n", engine.power, engine.torque, engine.fuelType)
 }
 
 func CarInfo(car Car) {
@@ -32,9 +32,9 @@ func main() {
 		year:  2022,
 	}
 	engine1 := Engine{
-		power:     248.0,
-		torque:    39.0,
-		fuel_type: "flex",
+		power:    248.0,
+		torque:   39.0,
+		fuelType: "flex",
 	}
 	CarInfo(car1)
 	car1.Start(engine1) // calling the Start() method from the embedded 'Engine' struct (inside 'Car' struct)

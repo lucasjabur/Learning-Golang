@@ -183,11 +183,11 @@ func main() {
 	fmt.Println("---------------------------------------------")
 
 	// That's why a slice has a underlying array, and that means that a slice has a pointer pointing to an array
-	// So, 'slice10' is pointing to an underlying array, let's call it 'underlying_array10', for example
-	// In other words: 'slice10' ---> 'underlying_array10'
-	// When we say: 'slice11 := slice10', what the Golang compiler sees is: 'slice11' ---> 'underlying_array10'
-	// The result of that: every modification we do to 'slice10' will also modify 'underlying_array10' and, since
-	// 'underlying_array10' is the underlying array for 'slice11' as well, it will also modify 'slice11'.
+	// So, 'slice10' is pointing to an underlying array, let's call it 'underlyingArray10', for example
+	// In other words: 'slice10' ---> 'underlyingArray10'
+	// When we say: 'slice11 := slice10', what the Golang compiler sees is: 'slice11' ---> 'underlyingArray10'
+	// The result of that: every modification we do to 'slice10' will also modify 'underlyingArray10' and, since
+	// 'underlyingArray10' is the underlying array for 'slice11' as well, it will also modify 'slice11'.
 
 	// Now, let's play a little more:
 	fmt.Println("\nUnderstanding how slices work under the table (PART 2):")

@@ -9,11 +9,11 @@ import (
 )
 
 type person struct {
-	first_name string
+	firstName string
 }
 
 func (person person) writeOut(writer io.Writer) error {
-	_, err := writer.Write([]byte(person.first_name))
+	_, err := writer.Write([]byte(person.firstName))
 
 	return err
 }
@@ -21,7 +21,7 @@ func (person person) writeOut(writer io.Writer) error {
 func main() {
 
 	person1 := person{
-		first_name: "Lucas",
+		firstName: "Lucas",
 	}
 
 	file, err := os.Create("output.txt")

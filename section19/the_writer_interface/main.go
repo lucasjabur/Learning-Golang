@@ -6,11 +6,11 @@ import (
 )
 
 // type person struct {
-// 	first_name string
+// 	firstName string
 // }
 
 // func (person person) writeOut(writer io.Writer) error {
-// 	_, err := writer.Write([]byte(person.first_name))
+// 	_, err := writer.Write([]byte(person.firstName))
 
 // 	return err
 // }

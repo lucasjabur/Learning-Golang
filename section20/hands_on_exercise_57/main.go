@@ -14,18 +14,18 @@ func main() {
 			- arguments: values passed to the function
 
 		- Syntax of a function:
-			- 'func (r receiver) function_name(p parameters) (returns) { code }'
+			- 'func (r receiver) functionName(p parameters) (returns) { code }'
 
 		- Variadic parameters:
 			- variadic parameters are an infinite amount of values that can be passed to a function, like so:
 				- 'func sum(elements ...int) int { code }'
 				- remembering that 'elements' is a slice of 'int' values
 				- so, you can do like:
-					- 'sum_return := sum(1, 2, 3, 4, 5)', or
-					- 'values := []int{1, 2, 3, 4, 5}; sum_return := sum(values...)'
+					- 'sumReturn := sum(1, 2, 3, 4, 5)', or
+					- 'values := []int{1, 2, 3, 4, 5}; sumReturn := sum(values...)'
 
 		- Unfurling a slice:
-			- 'values := []int{1, 2, 3, 4, 5}; sum_return := sum(values...)' here I am unfurling a slice
+			- 'values := []int{1, 2, 3, 4, 5}; sumReturn := sum(values...)' here I am unfurling a slice
 			- the use of '...' expands the slice into individual arguments when calling a veriadic function
 
 		- 'defer' statement:
@@ -43,11 +43,11 @@ func main() {
 			- take the following code as example:
 
 				type person struct {
-					first_name string
+					firstName string
 				}
 
 				func (person person) speak() {
-					fmt.Println("My name is ", person.first_name)
+					fmt.Println("My name is ", person.firstName)
 				}
 
 				- in this case, 'speak()' is a method of the 'person' struct
@@ -58,7 +58,7 @@ func main() {
 			- take the following code as example:
 
 				type person struct {
-					first_name string
+					firstName string
 				}
 
 				type student struct {
@@ -67,11 +67,11 @@ func main() {
 				}
 
 				func (person person) introduceYourself() {
-					fmt.Println("I am,", person.first_name)
+					fmt.Println("I am,", person.firstName)
 				}
 
 				func (student student) introduceYourself() {
-					fmt.Println("I am,", student.first_name)
+					fmt.Println("I am,", student.firstName)
 				}
 
 				type human interface {
@@ -111,7 +111,7 @@ func main() {
 
 				func main() {
 
-					function1 := example_function() {
+					function1 := exampleFunction() {
 						fmt.Println("This is an example!")
 					}
 					function1()
@@ -121,7 +121,7 @@ func main() {
 			- functions are first class citizens, just like variables and types, for example
 			- so we can return a function just as we can return a variable of type 'int':
 
-				func returning_function() func() {
+				func returningFunction() func() {
 					return func() {
 						fmt.Println("Hello! I'm a function and a return!")
 					}

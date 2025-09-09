@@ -6,10 +6,10 @@ import (
 	"os"
 )
 
-func read_file(file_name string) ([]byte, error) { // 'read_file()' is a wrapper function
-	file, err := os.ReadFile(file_name) // because it envolves the original "read file" function
+func readFile(fileName string) ([]byte, error) { // 'readFile()' is a wrapper function
+	file, err := os.ReadFile(fileName) // because it envolves the original "read file" function
 	if err != nil {
-		return nil, fmt.Errorf("error in read_file() func: %s", err)
+		return nil, fmt.Errorf("error in readFile() func: %s", err)
 	}
 	return file, nil
 }
@@ -18,9 +18,9 @@ func read_file(file_name string) ([]byte, error) { // 'read_file()' is a wrapper
 // This helps the programmer to understand exactly what happened, for example, using and manipulating the error message
 
 func main() {
-	file, err := read_file("poem.txt")
+	file, err := readFile("poem.txt")
 	if err != nil {
-		log.Fatalf("read_file in main(): %s", err)
+		log.Fatalf("readFile in main(): %s", err)
 	}
 
 	fmt.Println(file)

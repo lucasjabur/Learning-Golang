@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 type person struct {
-	first_name string
+	firstName string
 }
 
 type student struct {
@@ -12,11 +12,11 @@ type student struct {
 }
 
 func (person person) introduceYourself() {
-	fmt.Println("I am,", person.first_name)
+	fmt.Println("I am,", person.firstName)
 }
 
 func (student student) introduceYourself() {
-	fmt.Println("I am,", student.first_name) // 'student' are also people because I defined it inside the 'Student' struct
+	fmt.Println("I am,", student.firstName) // 'student' are also people because I defined it inside the 'Student' struct
 }
 
 type human interface { // an 'interface' is a set of method signatures
@@ -35,14 +35,14 @@ func main() {
 
 	student1 := student{
 		person: person{
-			first_name: "Lucas",
+			firstName: "Lucas",
 		},
 
 		course: "Computer Science",
 	}
 
 	person2 := person{
-		first_name: "Manuela",
+		firstName: "Manuela",
 	}
 
 	// person1.introduceYourself()
